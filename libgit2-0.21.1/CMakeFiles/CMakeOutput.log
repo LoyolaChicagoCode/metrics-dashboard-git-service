@@ -1,0 +1,243 @@
+The system is: Darwin - 13.3.0 - i386
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2451899650/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec2451899650.dir/build.make CMakeFiles/cmTryCompileExec2451899650.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2451899650.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2451899650.dir/testCCompiler.c.o   -c /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec2451899650
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2451899650.dir/link.txt --verbose=1
+/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTryCompileExec2451899650.dir/testCCompiler.c.o  -o cmTryCompileExec2451899650  
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1077238867/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec1077238867.dir/build.make CMakeFiles/cmTryCompileExec1077238867.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1077238867.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1077238867.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/2.8.12.2/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec1077238867
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1077238867.dir/link.txt --verbose=1
+/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTryCompileExec1077238867.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1077238867   
+Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
+Target: x86_64-apple-darwin13.3.0
+Thread model: posix
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.9.0 -o cmTryCompileExec1077238867 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTryCompileExec1077238867.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-236.4
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 armv6m armv7m armv7em
+Library search paths:
+	/usr/lib
+	/usr/local/lib
+Framework search paths:
+	/Library/Frameworks/
+	/System/Library/Frameworks/
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec1077238867/fast"]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec1077238867.dir/build.make CMakeFiles/cmTryCompileExec1077238867.dir/build]
+  ignore line: [/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec1077238867.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1077238867.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/2.8.12.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec1077238867]
+  ignore line: [/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1077238867.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTryCompileExec1077238867.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1077238867   ]
+  ignore line: [Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)]
+  ignore line: [Target: x86_64-apple-darwin13.3.0]
+  ignore line: [Thread model: posix]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.9.0 -o cmTryCompileExec1077238867 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTryCompileExec1077238867.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/lib/darwin/libclang_rt.osx.a]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.9.0] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec1077238867] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec1077238867.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/usr/lib;/usr/local/lib]
+  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
+  remove lib [System]
+  collapse lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/lib/darwin/libclang_rt.osx.a] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
+  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
+  implicit libs: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a]
+  implicit dirs: [/usr/lib;/usr/local/lib]
+  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+
+
+Performing C SOURCE FILE Test IS_FVISIBILITY=HIDDEN_SUPPORTED succeded with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3255347029/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec3255347029.dir/build.make CMakeFiles/cmTryCompileExec3255347029.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3255347029.dir/src.c.o
+/usr/bin/cc   -D_GNU_SOURCE -Wall -Wextra  -DIS_FVISIBILITY=HIDDEN_SUPPORTED   -fvisibility=hidden -o CMakeFiles/cmTryCompileExec3255347029.dir/src.c.o   -c /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec3255347029
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3255347029.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -DIS_FVISIBILITY=HIDDEN_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTryCompileExec3255347029.dir/src.c.o  -o cmTryCompileExec3255347029  
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WNO-MISSING-FIELD-INITIALIZERS_SUPPORTED succeded with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1677914816/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec1677914816.dir/build.make CMakeFiles/cmTryCompileExec1677914816.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1677914816.dir/src.c.o
+/usr/bin/cc   -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -DIS_WNO-MISSING-FIELD-INITIALIZERS_SUPPORTED   -Wno-missing-field-initializers -o CMakeFiles/cmTryCompileExec1677914816.dir/src.c.o   -c /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:170:
+<command line>:2:15: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WNO-MISSING-FIELD-INITIALIZERS_SUPPORTED 1
+              ^
+1 warning generated.
+Linking C executable cmTryCompileExec1677914816
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1677914816.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -DIS_WNO-MISSING-FIELD-INITIALIZERS_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTryCompileExec1677914816.dir/src.c.o  -o cmTryCompileExec1677914816  
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WSTRICT-ALIASING=2_SUPPORTED succeded with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1235045036/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec1235045036.dir/build.make CMakeFiles/cmTryCompileExec1235045036.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1235045036.dir/src.c.o
+/usr/bin/cc   -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -DIS_WSTRICT-ALIASING=2_SUPPORTED   -Wstrict-aliasing=2 -o CMakeFiles/cmTryCompileExec1235045036.dir/src.c.o   -c /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:170:
+<command line>:2:19: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WSTRICT-ALIASING 2_SUPPORTED
+                  ^
+1 warning generated.
+Linking C executable cmTryCompileExec1235045036
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1235045036.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -DIS_WSTRICT-ALIASING=2_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTryCompileExec1235045036.dir/src.c.o  -o cmTryCompileExec1235045036  
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WSTRICT-PROTOTYPES_SUPPORTED succeded with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec135717441/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec135717441.dir/build.make CMakeFiles/cmTryCompileExec135717441.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec135717441.dir/src.c.o
+/usr/bin/cc   -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -DIS_WSTRICT-PROTOTYPES_SUPPORTED   -Wstrict-prototypes -o CMakeFiles/cmTryCompileExec135717441.dir/src.c.o   -c /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:170:
+<command line>:2:19: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WSTRICT-PROTOTYPES_SUPPORTED 1
+                  ^
+1 warning generated.
+Linking C executable cmTryCompileExec135717441
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec135717441.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -DIS_WSTRICT-PROTOTYPES_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTryCompileExec135717441.dir/src.c.o  -o cmTryCompileExec135717441  
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WDECLARATION-AFTER-STATEMENT_SUPPORTED succeded with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2250042625/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec2250042625.dir/build.make CMakeFiles/cmTryCompileExec2250042625.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2250042625.dir/src.c.o
+/usr/bin/cc   -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -DIS_WDECLARATION-AFTER-STATEMENT_SUPPORTED   -Wdeclaration-after-statement -o CMakeFiles/cmTryCompileExec2250042625.dir/src.c.o   -c /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:170:
+<command line>:2:24: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WDECLARATION-AFTER-STATEMENT_SUPPORTED 1
+                       ^
+1 warning generated.
+Linking C executable cmTryCompileExec2250042625
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2250042625.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -DIS_WDECLARATION-AFTER-STATEMENT_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTryCompileExec2250042625.dir/src.c.o  -o cmTryCompileExec2250042625  
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WNO-UNUSED-CONST-VARIABLE_SUPPORTED succeded with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec692534426/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec692534426.dir/build.make CMakeFiles/cmTryCompileExec692534426.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec692534426.dir/src.c.o
+/usr/bin/cc   -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -DIS_WNO-UNUSED-CONST-VARIABLE_SUPPORTED   -Wno-unused-const-variable -o CMakeFiles/cmTryCompileExec692534426.dir/src.c.o   -c /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:170:
+<command line>:2:15: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WNO-UNUSED-CONST-VARIABLE_SUPPORTED 1
+              ^
+1 warning generated.
+Linking C executable cmTryCompileExec692534426
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec692534426.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -DIS_WNO-UNUSED-CONST-VARIABLE_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTryCompileExec692534426.dir/src.c.o  -o cmTryCompileExec692534426  
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WNO-UNUSED-FUNCTION_SUPPORTED succeded with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3731383829/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec3731383829.dir/build.make CMakeFiles/cmTryCompileExec3731383829.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3731383829.dir/src.c.o
+/usr/bin/cc   -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -DIS_WNO-UNUSED-FUNCTION_SUPPORTED   -Wno-unused-function -o CMakeFiles/cmTryCompileExec3731383829.dir/src.c.o   -c /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:170:
+<command line>:2:15: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WNO-UNUSED-FUNCTION_SUPPORTED 1
+              ^
+1 warning generated.
+Linking C executable cmTryCompileExec3731383829
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3731383829.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -DIS_WNO-UNUSED-FUNCTION_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTryCompileExec3731383829.dir/src.c.o  -o cmTryCompileExec3731383829  
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WNO-DEPRECATED-DECLARATIONS_SUPPORTED succeded with the following output:
+Change Dir: /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec475187053/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTryCompileExec475187053.dir/build.make CMakeFiles/cmTryCompileExec475187053.dir/build
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_progress_report /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec475187053.dir/src.c.o
+/usr/bin/cc   -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -DIS_WNO-DEPRECATED-DECLARATIONS_SUPPORTED   -Wno-deprecated-declarations -o CMakeFiles/cmTryCompileExec475187053.dir/src.c.o   -c /Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:170:
+<command line>:2:15: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WNO-DEPRECATED-DECLARATIONS_SUPPORTED 1
+              ^
+1 warning generated.
+Linking C executable cmTryCompileExec475187053
+/usr/local/Cellar/cmake/2.8.12.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec475187053.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -DIS_WNO-DEPRECATED-DECLARATIONS_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTryCompileExec475187053.dir/src.c.o  -o cmTryCompileExec475187053  
+
+Source file was:
+int main(void) { return 0; }

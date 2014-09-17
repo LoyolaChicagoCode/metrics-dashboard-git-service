@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+8c458dd0b915ee716bfa7604c739303e tests/clar.suite

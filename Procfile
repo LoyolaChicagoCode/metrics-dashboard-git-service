@@ -1,1 +1,1 @@
-web: gunicorn hello:app --log-file=-
+web: gunicorn git_commit_service:app --log-file=-
