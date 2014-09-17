@@ -1,2 +1,0 @@
-/Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/git2.dir
-/Users/mdotson/git-commit-service/libgit2-0.21.1/CMakeFiles/libgit2_clar.dir
