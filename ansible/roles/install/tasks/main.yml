@@ -1,17 +1,28 @@
-- name: download cmake
-  apt: name=cmake
+- name: configure nginx file
+  template: src=nginx-lucid.list.j2 dest=/etc/apt/sources.list.d/nginx-lucid.list
 
-- name: download pip
-  apt: name=python-pip
+- name: get nginx signing key
+  shell: wget http://nginx.org/keys/nginx_signing.key
 
-- name: download pip
-  apt: name=python-dev
+- name: add nginx signing key
+  shell: apt-key add nginx_signing.key
 
-- name: download libffi-dev
-  apt: name=libffi-dev
+- name: remove key
+  command: rm nginx_signing.key
 
-- name: download libssl-dev
-  apt: name=libssl-dev
+- name: install nginx
+  apt: name=nginx update_cache=yes
 
-- name: download pkg-config
-  apt: name=pkg-config
+- name: install packages
+  action: apt pkg={{item}} state=installed
+  with_items:
+  - cmake
+  - python-pip
+  - python-dev
+  - build-essential
+  - libffi-dev
+  - libssl-dev
+  - pkg-config
+
+- name: install uwsgi
+  pip: name=uwsgi

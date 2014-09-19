@@ -1,0 +1,17 @@
+- name: create uwsgi user
+  shell: useradd -c 'uwsgi user,,,' -g nginx -d /nonexistent -s /bin/false uwsgi
+  ignore_errors: yes
+
+- name: upstart configuration
+  template: src=uwsgi.conf.j2 dest=/etc/init/uwsgi.conf
+
+- name: logging configuration
+  template: src=uwsgi.j2 dest=/etc/logrotate.d/uwsgi
+
+- name: prime log file
+  shell: touch /var/log/uwsgi.log && logrotate -f /etc/logrotate.d/uwsgi
+  ignore_errors: yes
+
+- name: mod user
+  shell: usermod -a -G nginx $USER
+

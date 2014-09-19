@@ -7,3 +7,4 @@
     - role: install
     - role: common
     - role: pygit_install
+    - role: configure_uwsgi

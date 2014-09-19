@@ -7,3 +7,6 @@ itsdangerous==0.24
 wsgiref==0.1.2
 cffi==0.8.6
 pygit2==0.21.3
+iso8601==0.1.10
+pymongo==2.7.2
+github3.py==0.9.1
