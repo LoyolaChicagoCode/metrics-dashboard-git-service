@@ -1,0 +1,17 @@
+- name: download cmake
+  apt: name=cmake
+
+- name: download pip
+  apt: name=python-pip
+
+- name: download pip
+  apt: name=python-dev
+
+- name: download libffi-dev
+  apt: name=libffi-dev
+
+- name: download libssl-dev
+  apt: name=libssl-dev
+
+- name: download pkg-config
+  apt: name=pkg-config

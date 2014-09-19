@@ -1,0 +1,9 @@
+---
+
+- hosts: aws
+  sudo: true
+  user: ubuntu
+  roles:
+    - role: install
+    - role: common
+    - role: pygit_install
