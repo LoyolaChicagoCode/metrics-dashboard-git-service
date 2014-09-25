@@ -1,6 +1,3 @@
-- name: configure nginx file
-  template: src=nginx-lucid.list.j2 dest=/etc/apt/sources.list.d/nginx-lucid.list
-
 - name: get nginx signing key
   shell: wget http://nginx.org/keys/nginx_signing.key
 
@@ -24,5 +21,11 @@
   - libssl-dev
   - pkg-config
 
+- name: install virtualenv
+  pip: name=virtualenv
+
 - name: install uwsgi
   pip: name=uwsgi
+
+- name: install packages
+  pip: requirements={{ HOME }}/requirements.txt virtualenv={{ HOME }}/env

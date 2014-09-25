@@ -1,0 +1,11 @@
+start on [2345]
+stop on [06]
+
+env GITHUB_PASSWORD={{ lookup('env', 'GITHUB_PASSWORD') }}
+env GITHUB_USERNAME={{ lookup('env', 'GITHUB_USERNAME') }}
+env MONGOLAB_URI={{ lookup('env', 'MONGOLAB_URI') }}
+
+script
+    cd {{ HOME }}
+    exec uwsgi --ini {{ CONFIG_DIR }}/git_commit_service.ini
+end script

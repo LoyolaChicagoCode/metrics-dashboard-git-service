@@ -4,7 +4,7 @@
   sudo: true
   user: ubuntu
   roles:
+    - role: copy_project
+    - role: libgit_install
     - role: install
-    - role: common
-    - role: pygit_install
-    - role: configure_uwsgi
+    - role: uwsgi

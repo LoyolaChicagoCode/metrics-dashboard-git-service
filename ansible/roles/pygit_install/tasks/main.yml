@@ -1,5 +1,0 @@
-- name: download cffi
-  pip: name=cffi
-
-- name: download pygit2
-  pip: name=pygit2

@@ -1,0 +1,9 @@
+- name: make project file
+  shell: mkdir {{ APP_NAME }} chdir={{ ansible_env.HOME }}
+  ignore_errors: yes
+
+- name: copy src to remote
+  copy: src=../../../../src dest={{ HOME }}
+
+- name: copy requirements.txt to remote
+  copy: src=../../../../requirements.txt dest={{ HOME }}
