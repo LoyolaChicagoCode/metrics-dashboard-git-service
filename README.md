@@ -3,7 +3,7 @@ git-commit-service.herokuapp.com
 Running Locally
 ---------------
 Make git_commit_service your current working directory
-virtualenv env; source env/bin/activate; pip install -r requirements.txt; uwsgi --http 0.0.0.0:8080 --home env --wsgi-file src/git_commit_service.py --callable app --master
+virtualenv env; source env/bin/activate; pip install -r requirements.txt; uwsgi --http 0.0.0.0:8080 --home env --wsgi-file src/git_commit_service.py --callable app --master --logger syslog:uwsgi1234
 
 Pushing to EC2
 --------------

@@ -20,6 +20,7 @@
   - libffi-dev
   - libssl-dev
   - pkg-config
+#  - rabbitmq-server
 
 - name: install virtualenv
   pip: name=virtualenv
