@@ -10,6 +10,3 @@ pygit2==0.21.3
 pymongo==2.7.2
 github3.py==0.9.1
 python-dateutil==2.1
-futures==2.2.0
-celery==3.1.15
-redis==2.10.3
