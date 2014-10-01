@@ -1,14 +1,16 @@
-- name: get nginx signing key
-  shell: wget http://nginx.org/keys/nginx_signing.key
-
-- name: add nginx signing key
-  shell: apt-key add nginx_signing.key
-
-- name: remove key
-  command: rm nginx_signing.key
-
-- name: install nginx
-  apt: name=nginx update_cache=yes
+# Not needed yet, maybe in the future
+#
+#- name: get nginx signing key
+#  shell: wget http://nginx.org/keys/nginx_signing.key
+#
+#- name: add nginx signing key
+#  shell: apt-key add nginx_signing.key
+#
+#- name: remove key
+#  command: rm nginx_signing.key
+#
+#- name: install nginx
+#  apt: name=nginx update_cache=yes
 
 - name: install packages
   action: apt pkg={{item}} state=installed

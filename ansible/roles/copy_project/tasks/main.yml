@@ -1,4 +1,4 @@
-- name: make project file
+- name: make project directory
   shell: mkdir {{ APP_NAME }} chdir={{ ansible_env.HOME }}
   ignore_errors: yes
 

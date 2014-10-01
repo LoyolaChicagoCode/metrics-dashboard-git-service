@@ -4,15 +4,11 @@ import json
 from pygit2 import Repository, clone_repository, Commit, Tree
 from pygit2 import GIT_SORT_TIME, GIT_SORT_REVERSE
 import os
-from github3 import login
 import time
 from pymongo import MongoClient
 from datetime import datetime, timedelta
 import shutil
-import re
 import dateutil.parser
-import logging
-# from celery import Celery
 import threading
 import uuid
 
@@ -20,9 +16,13 @@ import uuid
 app = Flask(__name__)
 
 mongodb_uri = os.environ.get('MONGOLAB_URI')
-github_username = os.environ.get('GITHUB_USERNAME')
-github_password = os.environ.get('GITHUB_PASSWORD')
 db = MongoClient(mongodb_uri).get_default_database()
+
+
+# main loop
+while True:
+    time.sleep(1)
+
 
 def convert_time_to_iso8601(commit_time):
     date_str_without_timezone = datetime.fromtimestamp(commit_time).isoformat()

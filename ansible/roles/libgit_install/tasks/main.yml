@@ -1,4 +1,4 @@
-### THIS MUST BE DONE FIRST! ###
+### This must be done before installing pygit (in the install role) ###
 - name: download libgit2
   shell: wget https://github.com/libgit2/libgit2/archive/v0.21.1.tar.gz chdir=/usr/local/lib
 
