@@ -1,6 +1,7 @@
 import os
 from flask import Flask, request, Response
 import json
+from github3 import login
 from pygit2 import Repository, clone_repository, Commit, Tree
 from pygit2 import GIT_SORT_TIME, GIT_SORT_REVERSE
 import os
@@ -15,14 +16,17 @@ import uuid
 
 app = Flask(__name__)
 
-mongodb_uri = os.environ.get('MONGOLAB_URI')
-db = MongoClient(mongodb_uri).get_default_database()
+github_username = os.environ.get('GITHUB_USERNAME')
+github_password = os.environ.get('GITHUB_PASSWORD')
+gh = login(github_username, password=github_password)
 
+# mongodb_uri = os.environ.get('MONGOLAB_URI')
+# db = MongoClient(mongodb_uri).get_default_database()
+db = MongoClient()['default']
 
 # main loop
-while True:
-    time.sleep(1)
-
+# while True:
+#     time.sleep(1)
 
 def convert_time_to_iso8601(commit_time):
     date_str_without_timezone = datetime.fromtimestamp(commit_time).isoformat()
@@ -43,32 +47,40 @@ def get_commits_for_repo(the_repo, repo_name):
         commit_list.append(the_commit)
     return commit_list
 
-
 @app.route('/', methods=['POST'])
 def default():
-    if mongodb_uri is None or github_username is None or github_password is None:
-        return Response("Environment variables not set.", status=500)
-    else:
-        directory_uuid = str(uuid.uuid4())
-        try:
-            repo_name = validate_and_return_repo(request.get_json(force=True))
-            repo_in_db = db.repositories.find_one({"_id": repo_name})
+    # if mongodb_uri is None:
+    #     return Response("Environment variables not set.", status=500)
+    # else:
+    directory_uuid = str(uuid.uuid4())
+    try:
+        repo_name = validate_and_return_repo(request)
+        repo_in_db = db.repositories.find_one({"_id": repo_name})
 
-            if repo_in_db is None:
-                thr = threading.Thread(target=do_stuff, args=[repo_name, directory_uuid])
-                thr.daemon = True
-                thr.start()
+        if repo_in_db is None:
+            thr = threading.Thread(target=do_stuff, args=[repo_name, directory_uuid])
+            thr.daemon = True
+            thr.start()
 
-                return Response("Repository %s added to watch list" % repo_name, status=200)
-            else:
-                raise RuntimeError("Repository " + repo_name + " is already being watched.")
-        except Exception as e:
-            shutil.rmtree('./' + directory_uuid, ignore_errors=True)
-            print(e)
-            return Response(e.message, status=400)
+            return Response("Repository %s added to watch list" % repo_name, status=200)
+        else:
+            raise RuntimeError("Repository " + repo_name + " is already being watched.")
+    except Exception as e:
+        shutil.rmtree('./' + directory_uuid, ignore_errors=True)
+        return Response(e.message, status=400)
 
 
-def validate_and_return_repo(json_data):
+def try_parsing_json(request):
+    try:
+        return request.get_json()
+    except Exception as e:
+        raise RuntimeError("Invalid JSON.")
+
+
+def validate_and_return_repo(request):
+    json_data = try_parsing_json(request)
+    if json_data is None:
+        raise RuntimeError("Must specify Content-Type type of 'application/json'")
     if len(json_data) != 1:
         raise RuntimeError("Invalid JSON. Expecting JSON of the form {\"repo\": \"user/repo\"}")
     else:
@@ -77,7 +89,11 @@ def validate_and_return_repo(json_data):
         if len(split_repo) != 2:
             raise RuntimeError("Repository must have the form user/repo. Example: mdotson/metrics-dashboard")
         else:
-            return repo
+            the_repo = gh.repository(split_repo[0], split_repo[1])
+            if the_repo is None:
+                raise RuntimeError("Repository %s does not exist" % repo)
+            else:
+                return repo
 
 
 def do_stuff(repo_name, directory_uuid):

@@ -2,7 +2,7 @@
 
 - hosts: aws
   sudo: true
-  user: ubuntu
+  user: manager
   roles:
     - role: copy_project
     - role: libgit_install

@@ -1,8 +1,0 @@
-[uwsgi]
-http = 0.0.0.0:80
-home = env
-wsgi-file = {{ HOME }}/src/{{ MAIN_FILE }}
-callable = app
-master = true
-enable-threads = true
-logger = file:{{ LOG_DIR }}/git_commit_service.log

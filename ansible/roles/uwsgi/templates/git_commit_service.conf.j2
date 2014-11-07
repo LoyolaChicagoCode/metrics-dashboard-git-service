@@ -1,9 +1,0 @@
-start on [2345]
-stop on [06]
-
-env MONGOLAB_URI={{ lookup('env', 'MONGOLAB_URI') }}
-
-script
-    cd {{ HOME }}
-    exec uwsgi --ini {{ CONFIG_DIR }}/git_commit_service.ini
-end script
