@@ -47,6 +47,10 @@ def get_commits_for_repo(the_repo, repo_name):
         commit_list.append(the_commit)
     return commit_list
 
+@app.route('/', methods=['GET'])
+def get():
+    return Response("debug", status=200)
+
 @app.route('/', methods=['POST'])
 def default():
     # if mongodb_uri is None:
