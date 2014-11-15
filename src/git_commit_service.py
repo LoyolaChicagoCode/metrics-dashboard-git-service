@@ -52,7 +52,7 @@ def get_commits_for_repo(the_repo, repo_name):
 def get():
     try:
         repos = db.repositories.find()
-        return Response(dumps(repos), status=200)
+        return Response(dumps(repos, indent=4, separators=(',', ': '), sort_keys=True), status=200)
     except Exception as e:
         return Response(e.message, status=500)
 
