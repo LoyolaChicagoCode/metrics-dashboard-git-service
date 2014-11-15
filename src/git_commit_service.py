@@ -22,7 +22,7 @@ gh = login(github_username, password=github_password)
 
 # mongodb_uri = os.environ.get('MONGOLAB_URI')
 # db = MongoClient(mongodb_uri).get_default_database()
-db = MongoClient().get_default_database()
+db = MongoClient()['default']
 
 # main loop
 # while True:
