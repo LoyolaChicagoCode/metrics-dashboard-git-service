@@ -1,7 +1,0 @@
----
-APP_NAME: git_commit_service
-HOME: "{{ ansible_env.HOME }}/{{ APP_NAME }}"
-LOG_DIR: "/var/log/{{ APP_NAME }}"
-SOCKET_DIR: "/var/run/{{ APP_NAME }}"
-CONFIG_DIR: "/etc/{{ APP_NAME }}"
-MAIN_FILE: git_commit_service.py
