@@ -50,7 +50,7 @@ def get_commits_for_repo(the_repo, repo_name):
 @app.route('/', methods=['GET'])
 def get():
     repos = db.repositories.find()
-    return Response(jsonify(repos), status=200)
+    return Response(json.dumps(repos, indent = 4, separators=(',', ': '), sort_keys=True), status=200)
 
 @app.route('/', methods=['POST'])
 def default():
