@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, Response
+from flask import Flask, request, Response, jsonify
 import json
 from github3 import login
 from pygit2 import Repository, clone_repository, Commit, Tree
@@ -50,7 +50,7 @@ def get_commits_for_repo(the_repo, repo_name):
 @app.route('/', methods=['GET'])
 def get():
     repos = db.repositories.find()
-    return Response(repos, status=200)
+    return jsonify(repos)
 
 @app.route('/', methods=['POST'])
 def default():
