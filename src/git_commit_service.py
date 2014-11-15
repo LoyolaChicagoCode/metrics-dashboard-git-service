@@ -22,7 +22,7 @@ gh = login(github_username, password=github_password)
 
 # mongodb_uri = os.environ.get('MONGOLAB_URI')
 # db = MongoClient(mongodb_uri).get_default_database()
-db = MongoClient()['default']
+db = MongoClient().get_default_database()
 
 # main loop
 # while True:
@@ -49,7 +49,8 @@ def get_commits_for_repo(the_repo, repo_name):
 
 @app.route('/', methods=['GET'])
 def get():
-    return Response("debug", status=200)
+    repos = db.repositories.find()
+    return Response(repos, status=200)
 
 @app.route('/', methods=['POST'])
 def default():
