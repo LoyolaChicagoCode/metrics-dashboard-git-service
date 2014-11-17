@@ -21,8 +21,6 @@ github_username = os.environ.get('GITHUB_USERNAME')
 github_password = os.environ.get('GITHUB_PASSWORD')
 gh = login(github_username, password=github_password)
 
-# mongodb_uri = os.environ.get('MONGOLAB_URI')
-# db = MongoClient(mongodb_uri).get_default_database()
 db = MongoClient()['default']
 
 # main loop
@@ -58,16 +56,15 @@ def get():
 
 @app.route('/', methods=['POST'])
 def default():
-    # if mongodb_uri is None:
-    #     return Response("Environment variables not set.", status=500)
-    # else:
+    if github_username is None or github_password is None:
+        return Response("Environment variables not set.", status=500)
     directory_uuid = str(uuid.uuid4())
     try:
         repo_name = validate_and_return_repo(request)
         repo_in_db = db.repositories.find_one({"_id": repo_name})
 
         if repo_in_db is None:
-            thr = threading.Thread(target=do_stuff, args=[repo_name, directory_uuid])
+            thr = threading.Thread(target=initial_clone_and_insert, args=[repo_name, directory_uuid])
             thr.daemon = True
             thr.start()
 
@@ -105,7 +102,7 @@ def validate_and_return_repo(request):
                 return repo
 
 
-def do_stuff(repo_name, directory_uuid):
+def initial_clone_and_insert(repo_name, directory_uuid):
     the_repo = clone_repository('git://github.com/' + repo_name + '.git', directory_uuid)
     commit_list = get_commits_for_repo(the_repo, repo_name)
     latest_commit = commit_list[-1]
